@@ -14,8 +14,8 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice,computerChoice){
-    humanChoice = getHumanChoice().toLowerCase()
     computerChoice = getComputerChoice().toLowerCase()
+    humanChoice = getHumanChoice().toLowerCase()
 
     if(humanChoice == "rock"){
         if(computerChoice == "paper"){
@@ -56,5 +56,17 @@ function playRound(humanChoice,computerChoice){
     }
 }
 
+
+function playGame(){
+    
+    for(let i=0; i<5;i++){
+        playRound()
+        console.log(humanScore)
+        console.log(computerScore)
+    }
+    console.log("Results of the game:\nComputer: "+computerScore+"\nHuman: "+humanScore)
+}
+
 let humanScore = 0
-let computerScore = 0
+    let computerScore = 0
+
